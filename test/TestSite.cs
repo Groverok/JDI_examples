@@ -18,5 +18,14 @@ namespace test
 
         [Page(Url = "/abtest")]
         public static ABPage ABPage;
+
+        [Page(Url = "/dropdown")]
+        public static DropDownPage DropDownPage;
+
+        [Page(Url = "/login")]
+        public static LoginPage LoginPage;
+
+        [Page(Url = "/secure")]
+        public static MainAuthPage MainAuthPage;
     }
 }

@@ -81,10 +81,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entity\User.cs" />
     <Compile Include="Pages\ABPage.cs" />
+    <Compile Include="Pages\MainAuthPage.cs" />
     <Compile Include="Pages\BasicAuthPage.cs" />
     <Compile Include="Pages\CheckBoxPage.cs" />
+    <Compile Include="Sections\LoginForm.cs" />
     <Compile Include="Pages\DropDownPage.cs" />
+    <Compile Include="Enum\Select.cs" />
+    <Compile Include="Pages\LoginPage.cs" />
     <Compile Include="Tests\first\BasicTests.cs" />
     <Compile Include="Pages\HomePage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

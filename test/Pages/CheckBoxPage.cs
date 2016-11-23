@@ -10,12 +10,5 @@ namespace test.Pages
     {
         [FindsBy(How = How.XPath, Using = "//*[@id='checkboxes']/input[2]")]
         public CheckBox CheckBox;
-
-        //[FindsBy(How = How.XPath, Using = "//*[text()='Basic Auth']")]
-        //public IWebElement authorisation;
-
-
-
-
-    }
+}
 }
