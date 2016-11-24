@@ -19,11 +19,11 @@ namespace test.Pages
         [FindBy(Css =".radius")]
         public IButton SubmitButton;
 
-        //public void FillForm(User user)
-        //{
-        //    NameField.NewInput(user.Name);
-        //    Password.NewInput(user.Password);
-        //}
+        public void FillForm(User user)
+        {
+            NameField.NewInput(user.Name);
+            Password.NewInput(user.Password);
+        }
 
     }
 }

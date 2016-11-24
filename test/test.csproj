@@ -83,12 +83,9 @@
   <ItemGroup>
     <Compile Include="Entity\User.cs" />
     <Compile Include="Pages\ABPage.cs" />
-    <Compile Include="Pages\DisappearingElementsPage.cs" />
     <Compile Include="Pages\MainAuthPage.cs" />
     <Compile Include="Pages\BasicAuthPage.cs" />
     <Compile Include="Pages\CheckBoxPage.cs" />
-    <Compile Include="Pages\SlowExternalPage.cs" />
-    <Compile Include="Pages\SlowResourcesPage.cs" />
     <Compile Include="Sections\LoginForm.cs" />
     <Compile Include="Pages\DropDownPage.cs" />
     <Compile Include="Enum\Select.cs" />

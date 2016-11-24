@@ -27,14 +27,5 @@ namespace test
 
         [Page(Url = "/secure")]
         public static MainAuthPage MainAuthPage;
-
-        [Page(Url = "/slow")]
-        public static SlowResourcesPage SlowResourcesPage;
-
-        [Page(Url = "/slow_external")]
-        public static SlowExternalPage SlowExternalPage;
-
-        [Page(Url = "/disappearing_elements")]
-        public  static DisappearingElementsPage DisappearingElementsPage;
     }
 }
