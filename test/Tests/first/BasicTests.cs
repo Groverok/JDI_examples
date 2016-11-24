@@ -30,51 +30,51 @@ namespace test.Tests.firts
         private IButton GalleryTab = TestSite.DisappearingElementsPage.OurGalleryTab;
 
 
-        //[Test]
-        //public void TestCheckboxes()
-        //{
-        //    TestSite.CheckBoxPage.Open();
-        //    TestSite.CheckBoxPage.CheckBox.Uncheck();
-        //    Assert.IsFalse(TestSite.CheckBoxPage.CheckBox.IsChecked());
-        //}
+        [Test]
+        public void TestCheckboxes()
+        {
+            TestSite.CheckBoxPage.Open();
+            TestSite.CheckBoxPage.CheckBox.Uncheck();
+            Assert.IsFalse(TestSite.CheckBoxPage.CheckBox.IsChecked());
+        }
 
-        //[Test]
-        //public void GetTextOnOurPageTest()
-        //{
-        //    TestSite.ABPage.Open();
-        //    Assert.AreEqual(_textItem.GetText, textOnOurPage);
-        //}
+        [Test]
+        public void GetTextOnOurPageTest()
+        {
+            TestSite.ABPage.Open();
+            Assert.AreEqual(_textItem.GetText, textOnOurPage);
+        }
 
-        //[Test]
-        //public void SelectDropDownTest()
-        //{
-        //    TestSite.DropDownPage.Open();
-        //    TestSite.DropDownPage.options.Select("Option 1");
+        [Test]
+        public void SelectDropDownTest()
+        {
+            TestSite.DropDownPage.Open();
+            TestSite.DropDownPage.options.Select("Option 1");
 
-        //}
+        }
 
-        //[Test]
-        //public void FillFormTest()
-        //{
-        //    TestSite.LoginPage.Open();
-        //    OurForm.Submit(User.DEFAULT_CONTACT);
-        //    Assert.IsTrue(OurButton.Displayed);
-        //}
+        [Test]
+        public void FillFormTest()
+        {
+            TestSite.LoginPage.Open();
+            OurForm.Submit(User.DEFAULT_CONTACT);
+            Assert.IsTrue(OurButton.Displayed);
+        }
 
-        //[Test]
-        //public void WaitForRequestTest()
-        //{
-        //    TestSite.SlowResourcesPage.Open();
-        //    _textItemSlow.WaitText(textOnSlowPage);
-        //    Assert.AreEqual(_textItemSlow.GetText, textOnSlowPage);
-        //}
+        [Test]
+        public void WaitForRequestTest()
+        {
+            TestSite.SlowResourcesPage.Open();
+            _textItemSlow.WaitText(textOnSlowPage);
+            Assert.AreEqual(_textItemSlow.GetText, textOnSlowPage);
+        }
 
-        //[Test]
-        //public void WaitForAppearingTextTest()
-        //{
-        //    TestSite.SlowExternalPage.Open();
-        //    textWhichShouldBeAppear.WaitText(textOnSlowExternalPage);
-        //}
+        [Test]
+        public void WaitForAppearingTextTest()
+        {
+            TestSite.SlowExternalPage.Open();
+            textWhichShouldBeAppear.WaitText(textOnSlowExternalPage);
+        }
 
         [Test]
         public void DisappearingElementsTest()
