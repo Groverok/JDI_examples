@@ -1,8 +1,5 @@
 ﻿using JDI_Web.Attributes;
-using JDI_Web.Selenium.Elements.Complex.Table;
 using JDI_Web.Selenium.Elements.Composite;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Support.PageObjects;
 using test.Pages;
 
 namespace test
@@ -35,6 +32,9 @@ namespace test
         public static SlowExternalPage SlowExternalPage;
 
         [Page(Url = "/disappearing_elements")]
-        public  static DisappearingElementsPage DisappearingElementsPage;
+        public static DisappearingElementsPage DisappearingElementsPage;
+
+        [Page(Url = "/upload")]
+        public static FileUploadPage FileUploadPage;
     }
 }

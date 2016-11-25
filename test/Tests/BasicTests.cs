@@ -1,7 +1,6 @@
 ﻿using Epam.JDI.Core.Interfaces.Common;
 using Epam.JDI.Core.Interfaces.Complex;
 using NUnit.Framework;
-using OpenQA.Selenium;
 using test.Entity;
 using test.Pages;
 using test.Pages.Enums;
@@ -10,25 +9,25 @@ namespace test.Tests.firts
 {
     public class Class1
     {
-        private ICheckBox _checkBoxWater = TestSite.CheckBoxPage.CheckBox; 
+        private ICheckBox _checkBoxWater = TestSite.CheckBoxPage.CheckBox;
 
-        private IText _textItem = TestSite.ABPage.Text;  
+        private IText _textItem = TestSite.ABPage.Text;
         private string textOnOurPage = "A/B Test Control";
 
-        private IDropDown<Select> options;  
+        private IDropDown<Select> options;
         private IDropDown<Select> selectDrop => options;
 
-        private LoginForm OurForm = TestSite.LoginPage.LoginForm;  
+        private LoginForm OurForm = TestSite.LoginPage.LoginForm;
         private IButton OurButton = TestSite.MainAuthPage.LogOutButton;
 
-        private IText _textItemSlow = TestSite.SlowResourcesPage.SlowResourcesText; 
+        private IText _textItemSlow = TestSite.SlowResourcesPage.SlowResourcesText;
         private string textOnSlowPage = "Slow Resources";
 
-        private IText textWhichShouldBeAppear = TestSite.SlowExternalPage.textWillAppearIn30Sseconds; 
+        private IText textWhichShouldBeAppear = TestSite.SlowExternalPage.textWillAppearIn30Sseconds;
         private string textOnSlowExternalPage = " Application error ";
 
         private IButton GalleryTab = TestSite.DisappearingElementsPage.OurGalleryTab;
-
+        private string nameOfOurFileExist = "trash.jpg";
 
         [Test]
         public void TestCheckboxes()
@@ -50,7 +49,7 @@ namespace test.Tests.firts
         {
             TestSite.DropDownPage.Open();
             TestSite.DropDownPage.options.Select("Option 1");
-
+            Assert.IsTrue(TestSite.DropDownPage.options.Displayed);
         }
 
         [Test]
@@ -83,8 +82,16 @@ namespace test.Tests.firts
             Assert.IsFalse(TestSite.DisappearingElementsPage.OurGalleryTab.Displayed);
             TestSite.DisappearingElementsPage.Refresh();
             Assert.IsTrue(TestSite.DisappearingElementsPage.OurGalleryTab.Displayed);
+        }
 
-
+        [Test]
+        public void UploadFileTest()
+        {
+            TestSite.FileUploadPage.Open();
+            string filePath = @"D:\trash.jpg"; //path of my upload file
+            TestSite.FileUploadPage.BrowseButton.Input(filePath);
+            TestSite.FileUploadPage.UploadButton.Click();
+            Assert.AreEqual(TestSite.FileUploadPage.nameOfOurFile.GetText, nameOfOurFileExist);
         }
     }
 }

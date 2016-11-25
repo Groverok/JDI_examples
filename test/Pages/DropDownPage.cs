@@ -14,10 +14,6 @@ namespace test.Pages
 {
     public class DropDownPage : WebPage
     {
-        [FindsBy(How = How.XPath, Using = "")]
         public IDropDown<Select> options = new Dropdown<Select>(By.CssSelector("#dropdown"), By.XPath(".//*[@id='dropdown']/option[1]"));
-        internal object selectDrop;
     }
-
-    
 }
